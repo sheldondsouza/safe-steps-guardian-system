@@ -1,73 +1,99 @@
-# Welcome to your Lovable project
 
-## Project info
+# IoT-Based Fall Prevention System
 
-**URL**: https://lovable.dev/projects/cd518510-3f4f-4b7d-afb4-f4530f2bc5f9
+This project is a full-stack application designed to help prevent falls among elderly individuals through IoT sensor monitoring, data analysis, and alert systems.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Real-time monitoring of movement patterns and fall risk
+- Historical data visualization and trends
+- Alert system for potential fall risks
+- User profiles with medical information and caregiver contacts
+- Responsive design for desktop and mobile devices
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cd518510-3f4f-4b7d-afb4-f4530f2bc5f9) and start prompting.
+### Frontend
+- React.js
+- Tailwind CSS
+- Recharts for data visualization
+- Shadcn/UI component library
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
+- Node.js
+- Express.js
+- RESTful API design
 
-**Use your preferred IDE**
+## Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+├── src/                  # Frontend React code
+│   ├── components/       # React components
+│   ├── pages/            # Page components
+│   ├── lib/              # Utility functions
+│   └── ...
+├── server/               # Backend Node.js code
+│   ├── controllers/      # API controllers
+│   ├── routes/           # API routes
+│   └── ...
+└── ...
 ```
 
-**Edit a file directly in GitHub**
+## Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
+- Node.js (v14+)
+- npm or yarn
 
-**Use GitHub Codespaces**
+### Installation
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Clone the repository
+2. Install frontend dependencies:
+   ```
+   npm install
+   ```
+3. Install backend dependencies:
+   ```
+   cd server
+   npm install
+   ```
 
-## What technologies are used for this project?
+### Running the Application
 
-This project is built with:
+1. Start the backend server:
+   ```
+   cd server
+   npm run dev
+   ```
+   The server will run on http://localhost:5000
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. Start the frontend development server:
+   ```
+   npm run dev
+   ```
+   The frontend will run on http://localhost:5173
 
-## How can I deploy this project?
+## API Endpoints
 
-Simply open [Lovable](https://lovable.dev/projects/cd518510-3f4f-4b7d-afb4-f4530f2bc5f9) and click on Share -> Publish.
+### Sensors
+- `GET /api/sensors` - Get all sensor data
+- `GET /api/sensors/recent-activity` - Get recent activity data
+- `POST /api/sensors/update` - Update sensor status (for IoT devices)
 
-## Can I connect a custom domain to my Lovable project?
+### Alerts
+- `GET /api/alerts` - Get all alerts with optional filtering
+- `POST /api/alerts` - Create a new alert
+- `PUT /api/alerts/:id` - Update an alert
+- `DELETE /api/alerts/:id` - Delete an alert
 
-Yes, you can!
+### Users
+- `GET /api/users/profile/:id` - Get user profile
+- `PUT /api/users/profile/:id` - Update user profile
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Next Steps for Production
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Implement authentication and authorization
+2. Connect to a real database (MongoDB, PostgreSQL)
+3. Set up proper error handling and logging
+4. Add automated testing
+5. Configure for production deployment
