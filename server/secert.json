@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "wearable-fall-dect",
+  "private_key_id": "aee35d1383a68bcce1224534a339fd22b34c3966",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDoxX4l3WOgEbhC\n1u1a4P5Gk++A9fKkai+8qJaMoVvvau8Ht8jhVeeg/ggI7Snsb6Z8rR2cpJ6te2yK\nosk3dZsloxbvvDj7EXNQ3rfQSZZh+u5fEAJj5mL2Ka2DcH6QN6lWiP+2oAoagKox\nmXBSTe8PNGcQgRrRvxBdBMBVg7hb1W4Ov6QThUx+1oHWfjbfnP/LeiyjGdI/6M1J\nFZt7yVnpainBN5iJySLJ9pR0ZOWYV3dXWm5bqHg4FQOXtUHV3k1ZpzSsm4jEOPmr\nDahY1ZrvAgXaCrVK0BfzbNysbGrTmzBMQsoppixVsFG7sy+TprsE0+XQ5xzDqFvA\nQoxx/7tRAgMBAAECggEAaGSqPrEbjR5lVRSvPqLJZz3RnDSxrasx3Zp+anOzl5yN\ntxhlrymnyDwlvlsfAjrQn/nD3gy2XXeNJl/7fjPwcODD2KDBrVgWL56zMWbPWwH/\nBgNYDxW0LFJkzx4UpPlRqM2oYW9FGL27lqMKDN+G53rI/k3oiUj3PcBzweZhOE2V\nDjWI549rUTGkTMb+0DRfyE9OhHl1eGvlqBhdiBIgRF7FNETsvLW2WLXSjtGy1br8\n88BcrKEizj6ffyMMl0uNsXpSQSSL8m+U71xC1vJ4hYm8qDYGrkpPcCS78L9Sx7c3\neimzsbfesjF4+7qVViyhS+6uiInlITCzzBo3G305QQKBgQD7vKgMTwaLHnrBKOy6\njnCKmC2GRVOOSdn8p2BdDmWBh7PgoBaEuUW9Q7HnDO1a7oGHm6gZ8sHaV6ibd//q\nkSNQdTJD0qEygKm+ylY0uixMNDmbVjEvTLXB5BlSaxayMAHYds9vTOtFcuT1hz4A\n/GW2FBTpxkNYWoGtHlI+yZwFNwKBgQDstp27d+pQfcoTeF/ppm7Ky3xj3Bo2Jfwo\nZGhophyPlJYCujHuUCS/AX5posvWsCAw0v4i9sk3l/HuWEPw485QrBYlJm0NvLNC\naY4uv8g/41D3qtiyaPtHecJdDjtaF+Ak0R7Ik5sf71XIyfUaYJvQvv7byXx9GjlQ\nCVv/tQiHtwKBgAOvBAqCEYdxn7w53BTyxqTQi0H+u7VGUWFIFbnm3wdhM/mifhHd\nIC8f0XefEc4V1WFlnrUaf0mxpK75t434J7siq+SgLWmuxk0bat2Ep+dJkFo8jaWy\niqpWqyQwmvlqiGxheLGZP4wZnU4Wd4rOJrLeYlv1YcDmOiWNXwi6LIVLAoGBALCf\nQeoTe547fYAxnT81lA1074eDP3uPtCpfYRhUeZMYhyXZ0E/FNOXgM3aWpgm2uQ41\nILLt+Q2mLjptWaRwFg1TmeJ2XYCWgBrZr+Fp7/zbnBpwO+hDNNsMGt5cNCTxE6nk\n71cx69lUN2nuZxgbZafIG1nbaSvfWUxC74ZIiejZAoGBAMnUcAW5YQGU3JDTQqCa\njFWqOZouhGQyKmOHrCOOt1/dfEEBimY4rVTSL+ozqW/L0QOvQV81KS0hR+vYgeyg\nfId3sljd3/459fHipjR/Kp9KmP6M6NDPzh8d1bR+W/KAu2uVUtKrWsS5u3hZ0KDB\njkb6oO/wJJUxAz38YdliQaCo\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@wearable-fall-dect.iam.gserviceaccount.com",
+  "client_id": "110547019050338831807",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40wearable-fall-dect.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
