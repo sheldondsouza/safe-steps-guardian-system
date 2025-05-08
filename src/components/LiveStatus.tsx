@@ -1,14 +1,16 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface LiveStatusProps {
-  status: 'normal' | 'warning' | 'danger' | 'offline';
+  status: 'normal' | 'warning' | 'danger' | 'loading' | 'error' | 'unknown';
   name: string;
   location: string;
   lastUpdated: string;
   heartRate?: number;
-  movement?: 'active' | 'resting' | 'sleeping' | 'none';
+  movement?: 'resting' | 'none' | 'active' | 'sleeping'; // Correctly typing movement prop
+  bodyTemperature?: number;
+  roomTemperature?: number;
+  spo2?: number;
 }
 
 const LiveStatus: React.FC<LiveStatusProps> = ({ 
@@ -19,6 +21,7 @@ const LiveStatus: React.FC<LiveStatusProps> = ({
   heartRate = 0, 
   movement = 'none' 
 }) => {
+  // Function to determine the status color
   const getStatusColor = () => {
     switch (status) {
       case 'normal':
@@ -27,13 +30,12 @@ const LiveStatus: React.FC<LiveStatusProps> = ({
         return 'bg-guardian-warning';
       case 'danger':
         return 'bg-guardian-danger animate-pulse-alert';
-      case 'offline':
-        return 'bg-gray-400';
       default:
         return 'bg-gray-400';
     }
   };
 
+  // Function to determine the status text
   const getStatusText = () => {
     switch (status) {
       case 'normal':
@@ -42,42 +44,42 @@ const LiveStatus: React.FC<LiveStatusProps> = ({
         return 'Unusual Activity';
       case 'danger':
         return 'Fall Detected';
-      case 'offline':
-        return 'Offline';
       default:
         return 'Unknown';
     }
   };
 
+  // Function to get the movement icon based on state
   const getMovementIcon = () => {
     switch (movement) {
       case 'active':
-        return '🚶';
+        return '🚶‍♂️'; // Walking icon for active
       case 'resting':
-        return '🪑';
+        return '🪑'; // Sitting/resting icon
       case 'sleeping':
-        return '🛌';
+        return '🛌'; // Sleeping icon
       case 'none':
       default:
-        return '❓';
+        return '❓'; // Unknown movement state
     }
   };
 
   return (
-    <Card>
+    <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
           <div>
-            <CardTitle>{name}</CardTitle>
-            <CardDescription>{location}</CardDescription>
+            <CardTitle className="text-xl font-semibold">{name}</CardTitle>
+            <CardDescription className="text-sm text-gray-500">{location}</CardDescription>
           </div>
           <div className={`${getStatusColor()} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
             {getStatusText()}
           </div>
         </div>
       </CardHeader>
+
       <CardContent>
-        <div className="grid grid-cols-3 gap-4 text-center">
+        <div className="grid grid-cols-3 gap-6 text-center">
           <div className="flex flex-col">
             <span className="text-sm text-gray-500">Heart Rate</span>
             <span className="text-xl font-bold">{heartRate} BPM</span>
