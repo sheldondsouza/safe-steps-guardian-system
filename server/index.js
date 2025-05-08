@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -19,7 +19,7 @@ const serviceAccount = require('./secert.json'); // <--- SECURE THIS FILE!
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: process.env.Database_URL // Your RTDB URL
+  databaseURL: process.env.DATABASE_URL // Your RTDB URL
 });
 
 // You can now get a reference to the database service

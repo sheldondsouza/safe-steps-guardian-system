@@ -6,7 +6,7 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   // ...
   // The value of `databaseURL` depends on the location of the database
-  databaseURL: "https://wearable-fall-dect-default-rtdb.firebaseio.com/",
+  databaseURL: "https://iotvcc-default-rtdb.asia-southeast1.firebasedatabase.app/",
 };
 
 // Initialize Firebase
