@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/login";
 
-import Login from "./pages/login"
+
 
 const queryClient = new QueryClient();
 
