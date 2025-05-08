@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -19,7 +19,7 @@ const serviceAccount = require('./secert.json'); // <--- SECURE THIS FILE!
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://wearable-fall-dect-default-rtdb.firebaseio.com/" // Your RTDB URL
+  databaseURL: process.env.DATABASE_URL // Your RTDB URL
 });
 
 // You can now get a reference to the database service
@@ -126,7 +126,7 @@ app.post('/api/login', async (req, res) => {
 
   try {
     // Send a POST request to Firebase Authentication REST API to authenticate the user
-    const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCG6iSfzw9hDkyH_B26huce-c-BaNDqZMQ"
+    const response = await axios.post(process.env.GOOGLE_API
 , {
       email: email,
       password: password,
